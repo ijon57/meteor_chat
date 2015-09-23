@@ -1,0 +1,43 @@
+<head>
+  <title>Chat with Meteor</title>
+</head>
+
+<body>
+  <h1>Meteor Chat</h1>
+  {{#if showLogin}}
+    {{> login}}
+  {{/if}}
+
+  <div id="message_history" class="messageHistory">
+    {{#each messageHistory}}
+      {{> message}}
+    {{/each}}
+  </div>
+
+  {{> chatForm}}
+</body>
+
+<template name="chatForm">
+  <form class="chatForm">
+    <div class="userName">{{userName}}</div>
+    <input name="message" placeholder="Your message..." />
+    <button>Send</button>
+  </form>
+</template>
+
+<template name="message">
+  <div class="message {{#if isMe }} me {{/if}}">
+    <div class="userName">{{userName}}:</div>
+    <div class="date">{{formatDate createdAt}}</div>
+    <div class="text">{{text}}</div>
+  </div>
+</template>
+
+<template name="login">
+  <div class="loginBox">
+    <form class='loginForm'>
+      <input name="userName" placeholder="What's your name?" required="true" />
+      <button>Go!</button>
+    </form>
+  </div>
+</template>

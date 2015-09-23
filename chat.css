@@ -1,0 +1,66 @@
+/* CSS declarations go here */
+
+.chatForm {
+  margin-top: 10px;
+}
+.chatForm div.userName {
+  display: inline-block;
+  width: 50px;
+  overflow: hidden;
+}
+.chatForm input {
+  width: 330px;
+  height: 20px;
+}
+
+.chatForm button {
+  width: 50px;
+  height: 20px;
+}
+
+.messageHistory {
+  width:  450px;
+  height: 300px;
+  overflow: auto;
+}
+
+.message {
+  background: #def;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #cde;
+  float: right;
+}
+.message.me {
+  background: #dfe;
+  float: left;
+}
+.message .text {
+  clear: both;
+  color: #234;
+  font-size: 12pt;
+  padding-top: 5px;
+}
+.message .userName {
+  float: left;
+  color: #789;
+  font-size: 12pt;
+}
+.message .date {
+  float: right;
+  color: #678;
+  font-size: 10pt;
+}
+
+.loginBox {
+  position: absolute;
+  width: 450px;
+  height: 400px;
+  background: rgba(255,255,255,0.8);
+}
+.loginBox form {
+  margin-top: 150px;
+  margin-left: 150px;
+}
